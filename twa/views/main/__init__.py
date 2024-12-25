@@ -2,4 +2,4 @@ from flask import Blueprint
 
 bp = Blueprint('main', __name__)
 
-from views.main import routes
+from twa.views.main import routes

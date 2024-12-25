@@ -1,6 +1,6 @@
 from flask import render_template
 
-from views.main import bp
+from twa.views.main import bp
 
 @bp.route('/')
 def index():

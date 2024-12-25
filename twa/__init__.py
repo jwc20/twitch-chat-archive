@@ -1,7 +1,7 @@
 import os
 from flask import Flask
 
-from config import Config
+from twa.config import Config
 
 
 def create_app(test_config=None):
@@ -27,7 +27,7 @@ def create_app(test_config=None):
     db.init_app(app)
 
     # register blueprints
-    from views import bp as main_bp
+    from twa.views.main import bp as main_bp
     app.register_blueprint(main_bp)
     app.add_url_rule('/', endpoint='index')
 
