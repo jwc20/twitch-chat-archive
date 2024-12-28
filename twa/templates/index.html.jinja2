@@ -1,13 +1,29 @@
 {% extends 'base.html.jinja2' %}
 
-<title>{% block title %}{% endblock %}</title>
+{% block title %}Chat Messages{% endblock %}
 
+{% block content %}
 <section class="content">
   <header>
-    {% block header %}{% endblock %}
+    <h1>Chat Messages</h1>
   </header>
-  {% for message in get_flashed_messages() %}
-    <div class="flash">{{ message }}</div>
-  {% endfor %}
-  {% block content %}{% endblock %}
+  <table class="pure-table pure-table-bordered">
+    <thead>
+      <tr>
+        <th>Username</th>
+        <th>Chat Message</th>
+        <th>Timestamp</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for message in messages %}
+      <tr>
+        <td>{{ message.username }}</td>
+        <td>{{ message.chat_message }}</td>
+        <td>{{ message.timestamp }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
 </section>
+{% endblock %}

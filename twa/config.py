@@ -3,6 +3,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+
 class Config:
     def __init__(self, instance_path):
         self.FLASK_RUN_PORT = os.getenv('FLASK_RUN_PORT', 5000)
