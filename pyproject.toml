@@ -6,6 +6,8 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "flask>=3.1.0",
+    "fschat[model-worker,webui]>=0.2.36",
+    "guidance>=0.2.0rc1",
     "psycopg2-binary>=2.9.10",
     "python-dotenv>=1.0.1",
 ]
